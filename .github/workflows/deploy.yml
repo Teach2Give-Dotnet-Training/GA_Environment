@@ -27,7 +27,8 @@ jobs:
           key: npm-deps-${{ hashFiles('**/package-lock.json') }}
       - name: Output Environment Variables
         run: |
-          echo "MONGO DB UserName : $${{env.MONGODB_USERNAME}}"
+          echo "MONGO DB UserName : ${{env.MONGODB_USERNAME}}"
+          echo " At Port $PORT"
   deploy:
     needs: test
     runs-on: ubuntu-latest
