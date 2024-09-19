@@ -10,7 +10,7 @@ env:
 jobs:
   test:
     env:
-      MONGODB_USERNAME: test
+      MONGODB_USERNAME: ${{secrets.MONGODB_USERNAME}}
       MONGODB_PASSWORD: Test@123
       MONGODB_CLUSTER_ADDRESS: cluster0.15...
       PORT: 80
